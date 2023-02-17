@@ -1,0 +1,69 @@
+﻿@page
+@model Event_Planner.Pages.Locatii.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Locatie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Locatie.Denumire" class="control-label"></label>
+                <input asp-for="Locatie.Denumire" class="form-control" />
+                <span asp-validation-for="Locatie.Denumire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Locatie.Adresa" class="control-label"></label>
+                <input asp-for="Locatie.Adresa" class="form-control" />
+                <span asp-validation-for="Locatie.Adresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Locatie.Poza" class="control-label"></label>
+                <input asp-for="Locatie.Poza" class="form-control" />
+                <span asp-validation-for="Locatie.Poza" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Locatie.Nr_pers" class="control-label"></label>
+                <input asp-for="Locatie.Nr_pers" class="form-control" />
+                <span asp-validation-for="Locatie.Nr_pers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Locatie.Pret" class="control-label"></label>
+                <input asp-for="Locatie.Pret" class="form-control" />
+                <span asp-validation-for="Locatie.Pret" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Locatie.Descriere" class="control-label"></label>
+                <input asp-for="Locatie.Descriere" class="form-control" />
+                <span asp-validation-for="Locatie.Descriere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Locatie.DataInceput" class="control-label"></label>
+                <input asp-for="Locatie.DataInceput" class="form-control" />
+                <span asp-validation-for="Locatie.DataInceput" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Locatie.DataSfarsit" class="control-label"></label>
+                <input asp-for="Locatie.DataSfarsit" class="form-control" />
+                <span asp-validation-for="Locatie.DataSfarsit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
